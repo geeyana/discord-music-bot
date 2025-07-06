@@ -19,11 +19,12 @@ class help_cog(commands.Cog):
             title="♡ ₊˚ ✧ ‿︵‿୨୧‿︵‿ :cherry_blossom: 𝐍𝐨𝐭𝐞 :cherry_blossom: ‿︵‿୨୧‿︵‿ ✧ ₊˚ ♡",
             description="""
                 When Miku is typing, or there is a delay before playing, she is processing your video(s).               \
-                **She cannot play playlists with more than 3 songs or videos longer than one hour.**                    \n
+                Playlists take a longer amount of time to process as each video needs to be parsed before playing.      \
+                Miku can only play 30 tracks in a playlist.                                                             \n
 
                 Queueing up multiple songs in quick succession may result in an error reading `Already playing audio.`  \
                 This occurs when no songs are playing, and Miku tries to play queued songs at the same time because     \
-                requests were sent in quickly. Requeue the last song before the error message.                          
+                requests were sent in quickly. Requeue the last song before the error message.
             """,
             colour=discord.Color.from_rgb(238,161,205),
         )
@@ -103,7 +104,7 @@ class help_cog(commands.Cog):
         ) 
     
         embed3.set_image(url="https://i.postimg.cc/gj5T0xp8/help-image.png")
-        embed3.set_footer(text="© 2024 [username]")
+        embed3.set_footer(text="© 2024 peach._.blossom")
         
         await ctx.send(embed=embed1)
         await ctx.send(embed=embed2)
